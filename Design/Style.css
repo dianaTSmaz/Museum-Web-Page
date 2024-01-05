@@ -1,0 +1,288 @@
+
+
+
+body{
+    background-color: #DFBFB8;
+
+}
+
+.header{
+    height: 30rem;
+    /*Linear gradient is useful to create transparency effecto to the image*/
+    background:linear-gradient(rgba(213,40,145,.14),rgba(222, 189, 209, 0.034)),url(../Imagenes/LastEgg.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    position:relative;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+.header-text{
+ padding-left: 62%;
+ padding-top: 4.5rem;  
+ font-family: 'Montserrat', sans-serif;
+ font-family: 'Noto Serif', serif;
+ color: rgba(31, 28, 30, 0.86);
+ font-size: 3.5rem;
+}
+
+
+.menu{
+    background-color: beige;
+    margin-top: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.menu-elements{
+    display : flex;
+    justify-content: space-evenly;
+}
+
+.menu-item{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.3rem;
+    color: rgba(30, 29, 30, 0.86);
+}
+
+.menu-item :hover{
+    background-color: burlywood;
+    border-radius: 1rem;
+    /* top | right | bottom | left */
+    padding : .5rem .7rem;
+}
+    
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Configure the carousel*/
+
+.Artists{
+    width: 100%;
+    margin: 0px 0px;
+}
+
+@media(min-width:76.8rem){
+
+    .Artists{
+        margin: 0px 60px;
+    }
+    
+}
+
+/*El elementp que se toma como referencia debe de tener posiiocn relative,
+ mientras que el elemento que queremos posicionar respecto al otro elemento deb de ser absolut*/
+.Artists-Carousel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /*width: fit-content;*/
+    width: 50rem;
+
+    height: 35rem;
+     /* top | right | bottom | left */
+    padding: 1rem 0px;
+    margin: 0.5rem auto;
+    max-width: 95vw;
+    overflow:hidden;
+    background-color: blue;
+         
+}
+
+.carousel-track{
+    position : relative;
+    top:0rem;
+    left:0;
+    display: flex;
+    justify-content: center;
+    transition: .2 ease-in-out;
+    background-color: green;
+
+}
+
+.carousel-element{
+    position: relative;
+    top: 0rem;
+    right:1.5rem;
+    width: 40rem;
+    padding:  0 1.8rem;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    align-content: center;
+    height: 100%;
+}
+
+.carousel-element h4{
+    /*We use absolute position in order to colocate letter up the image*/
+    position: absolute;
+    font-size: 1.5rem;
+    z-index: 1;
+    color:white;
+    /* top | right | bottom | left */
+    padding: .98rem 25rem;
+}
+
+.carousel-element a img{
+      
+    object-fit: cover;
+    height: 30rem;
+    width: 35rem;
+    border-radius: 1.5rem;
+    /*X Position, Y Position, Radiuos Difussion and background color*/
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    transition : .3s ease-in-out;
+
+}
+
+/*Apply media query to make repsonsive the web page*/
+
+@media(min-width:768px){
+    .carousel-element{
+        width : 30rem;
+    }
+    .carrusel a img{
+        width:25rem;
+    }
+}
+
+/*Bottons*/
+
+.carrusel-arrow
+{
+    border-radius: 2.5rem;
+    background-color: whitesmoke;
+    position:absolute;
+    margin-left: -1rem;
+    z-index: 4;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border:0;
+    /*Helps to appear the  in the botton*/
+    cursor:pointer;
+}
+
+.carrusel-arrow:focus{
+       outline:0;
+}
+
+.carrusel-arrow svg{
+    width: 1.2rem;
+   /* height:100%;
+    color:rgba(222, 189, 209, 0.034);*/
+
+}
+
+.carrusel-prev{
+    left: 0rem;
+}
+
+.carrusel-next{
+    right:0rem;
+}
+
+/*News Container*/
+.Container-News
+{
+    width: 90%;
+    max-width: 100rem;
+    display:grid;
+    grid-gap:20px;
+    background-color: yellowgreen;
+
+    /*We are goint to apply the grid-areas*/
+    grid-template-areas: "first-news first-news first-news"
+                          "second-news second-news third-news"
+                          "fourth-news fourth-news third-news"
+                          "footer footer footer ";
+
+    /***
+    /*Apply grid to divide the container*/
+    grid-template-columns: repeat(3,1fr);
+
+    /*Quantity and rows features
+    grid-template-rows: repeat(4,auto);
+    ***/
+}
+
+.Container-News > div,
+.Container-News .first-news,
+.Container-News .second-news,
+.Container-News .third-news
+{
+    background: cyan;
+    padding: 3rem;
+    border-radius: .5rem;
+}
+
+.first-news{
+  
+    grid-area: first-news;
+    
+    /*grid-column-start: 1;   
+    grid-column-end: -1;*/
+    
+}
+
+.second-news{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.third-news{
+    background: yellow;
+    grid-area: third-news;
+   /* grid-row: span 2;*/
+    min-height: 10rem;
+}
+
+.fourth-news{
+    background: palevioletred;
+    grid-area: fourth-news;
+    /*grid-column: span 2;*/
+}
+.footer{
+
+    grid-area: footer;
+    /*grid-column: span 3;*/
+
+}
+/*We are going to make responsive the website using grid-areas*/
+
+@media(max-width:768px ) {
+   .Container-News{
+
+    grid-template-areas: "first-news first-news first-news"
+                          "second-news second-news second-news "
+                           "third-news third-news third-news"
+                           "fourth-news fourth-news fourth-news"
+                           "footer footer footer ";
+
+   }
+}
+
+
+/*Comment this part bcos , we are going to tray to use areas too mae responsive*/
+/*Implement media query to make the website responsive*/
+/*@media (max-width: 60rem ) {
+  .second-news{
+    grid-column: span 3 ;
+    
+  }
+
+  .third-news{
+    grid-column: span 3;
+  }
+};*/
+

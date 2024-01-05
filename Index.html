@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Carrington</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="Design/Style.css" as="Style">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Design/Style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 class="header-text">Musuem Carrington</h1>
+    </div>
+
+    <div class="container">
+        <!---MENU EN LA BARRA HORIZONTAL-->
+        <nav class="menu">
+            <ul class="menu-elements">
+                <li class="menu-item"><a href=""> Cultural Events </a></li>
+                <li class="menu-item"><a href=""> Collections </a></li>
+                <li class="menu-item"><a href=""> Costs & Paymets </a></li>
+            </ul>
+        </nav>
+        
+        <!--Carousel-->
+        <div class="Artists">
+        
+            <!--Carousel List-->
+            <!--This div is going to be the reference to lococate the images, so its position must be relative-->
+            <div class="Artists-Carousel">
+
+                <!--Codigo para diseñal el boton para que las imagenes se dezplazen lado izquierdo-->
+               <!--- <button class="Carousel-arrow carosel-prev" id="button-prev" onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-prev"
+                        class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="//www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                        </path>
+                    </svg>
+                </button>--->
+
+                <button class="carrusel-arrow carrusel-previuos" id="button-previous" data-button="button-previous"
+                onclick="app.processingButton(event)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                   </svg>
+
+                </button>
+
+
+                <!--Carousel Track-->
+                <div class="carousel-track" id="carousel-track">
+                    <div class="carousel-element">
+                        <div>
+
+                            <a href="/">
+                                <h4>Leonora Carrington</h4>
+                                <picture>
+                                    <img src="Imagenes/Carrington.jpg" alt="Leonara Carrington">
+                                </picture>
+                            </a>
+                        </div>
+
+                        <div class="carousel-element">
+                            <div>
+
+                                <a href="/">
+                                    <h4>Remedios Varo</h4>
+                                    <picture>
+                                        <img src="Imagenes/remedios-varos.jpg" alt="Remedios Varo">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-element">
+                            <div>
+
+                                <a href="/">
+                                    <h4>Francisco de Goya</h4>
+                                    <picture>
+                                        <img src="Imagenes/FrancisicoGoya.jpg" alt="Francisco de Goya">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-element">
+                            <div>
+
+                                <a href="/">
+                                    <h4>Gustav Klimt</h4>
+                                    <picture>
+                                        <img src="Imagenes/gustav_klimt.png" alt="Gustave Klimt">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-element">
+                            <div>
+
+                                <a href="/">
+                                    <h4>Carmen Mondragon</h4>
+                                    <picture>
+                                        <img src="Imagenes/CarmenMondragon.jpg" alt="Carmen Mondragon">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-element">
+                            <div>
+                                <a href="/">
+                                    <h4>Jose Gpe Posada</h4>
+                                    <picture>
+                                        <img src="Imagenes/jos_eguadalupe_posada.jpg" alt="Jose Gpe Posada">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!--Boton para el desplazamiento derecho-->
+                <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                    onclick="app.processingButton(event)">
+                   <!--- <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">--->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path 
+                            fill-rule="evenodd" 
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+
+                        <!--<path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>--->
+                    <!--</svg>-->
+                </button>
+
+                <!---Boton para desplazamiento Izquierdo-->
+               
+                
+
+
+            </div>
+        </div>
+    </div>
+  
+    <!-----------------Container about News------->
+    <div class="Container-News">
+     <main class="first-news">
+        <h1>Rennaisance Feautures</h1>
+        <p></p>
+     </main>
+     <div class="second-news">
+        <h3>Amor Poetry</h3>
+        <p>
+            s simplemente el texto de relleno de las imprentas y archivos de texto. 
+            Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, 
+            cuando un impresor (N. del T. persona que se dedica a la imprenta) 
+            desconocido usó una galería de textos y los mezcló de tal manera que logró 
+            hacer un libro de textos especimen. No sólo sobrevivió 500 años, 
+            sino que tambien ingresó como texto de relleno en documentos electrónicos,
+             quedando esencialmente igual al original. Fue popularizado en los 60s con la
+              creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, 
+              y más recientemente con software de autoedición
+            , como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+        </p><br><br>
+        <p>
+            l contrario del pensamiento popular, el texto de Lorem Ipsum 
+            no es simplemente texto aleatorio. Tiene sus raices en una pieza 
+            clasica de la literatura del Latin, que data del año 45 antes de Cristo, 
+            haciendo que este adquiera mas de 2000 años de antiguedad. 
+            Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney 
+            en Virginia, encontró una de las palabras más oscuras de la lengua del latín,
+             "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos 
+             del latín, descubrió la fuente indudable.
+             Lorem Ipsum viene de las secciones 
+             1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum"
+        </p>
+    </div>
+     <aside class="third-news">
+        <h3>Widget 1</h3>
+     </aside>
+     <div class="fourth-news">
+        <h3>Widget-2</h3>
+     </div>
+     <footer class="footer">
+        <h3>Footer</h3>
+     </footer>
+
+    </div>
+
+</body>
+
+</html>
